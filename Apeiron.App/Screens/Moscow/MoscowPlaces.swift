@@ -11,33 +11,15 @@ import CoreLocation
 /// Places in Moscow which should be pinned on the map
 let moscowPlaces: [Place] = [
     Place(
-        action: .performSegue("ARSegue"),
-        address: "Бауманская улица, 40",
-        coordinate: CLLocationCoordinate2D(latitude: 55.770811, longitude: 37.677652),
-        title: "Дом, где родился А. С. Пушкин"
+        action: .openURL("https://yandex.ru/maps/213/moscow/?um=wx_1jxFRH5cZ32wAHlBIvA-pzSF0VJTH&ll=37.590746%2C55.75121&spn=0.042014%2C0.016168&z=15&l=map%2Cstv%2Csta&oid=&mode=usermaps&panorama%5Bpoint%5D=37.602697%2C55.744675&panorama%5Bdirection%5D=40.749411%2C7.777631&panorama%5Bspan%5D=119.496886%2C63.922687"),
+        address: "Площадь Пречистенские ворота (быв. Кропоткинские ворота), вид на ул. Волхонку",
+        coordinate: CLLocationCoordinate2D(latitude: 55.744675, longitude: 37.602697),
+        title: "Первые кадры фильма"
     ),
     Place(
-        action: .performSegue("ARSegue"),
-        address: "Большой Харитоньевский переулок, 21с1",
-        coordinate: CLLocationCoordinate2D(latitude: 55.766557, longitude: 37.648762),
-        title: "Семья Пушкиных жила здесь в 1802–1803 гг."
+        action: .image("03.24.23", "Девочки убегают от Весельчака"),
+        address: "Вид с Гоголевского бульвара на площадь Пречистенские ворота (бывш. Кропоткинские ворота)",
+        coordinate: CLLocationCoordinate2D(latitude: 55.744735, longitude: 37.601314),
+        title: "Девочки убегают от Весельчака"
     ),
-    Place(
-        action: .performSegue("ARSegue"),
-        address: "Спартаковская улица, 15",
-        coordinate: CLLocationCoordinate2D(latitude: 55.772679, longitude: 37.674993),
-        title: "Собор Богоявления Господня в Елохове, где крестили Пушкина"
-    ),
-    Place(
-        action: .performSegue("ARSegue"),
-        address: "Большая Никитская улица, 36с1",
-        coordinate: CLLocationCoordinate2D(latitude: 55.757718, longitude: 37.595779),
-        title: "Храм Большое Вознесение, где венчались Пушкин и Гончарова"
-    ),
-    Place(
-        action: .performSegue("ARSegue"),
-        address: "улица Арбат, 53с6",
-        coordinate: CLLocationCoordinate2D(latitude: 55.747226, longitude: 37.586086),
-        title: "Дом, где в 1830–31 жил поэт и его молодая жена"
-    )
 ]

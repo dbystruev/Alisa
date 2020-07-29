@@ -5,10 +5,11 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Пушкин в Москве-->
+        <!--Съёмки в Москве-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MoscowViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MoscowViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,17 +30,67 @@
                             <constraint firstItem="eLe-H5-W9E" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="eCM-sw-TQ2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Пушкин в Москве" largeTitleDisplayMode="always" id="yWg-rh-y5W">
+                    <navigationItem key="navigationItem" title="Съёмки в Москве" largeTitleDisplayMode="always" id="yWg-rh-y5W">
                         <barButtonItem key="backBarButtonItem" title="Москва" id="QVw-tc-inp"/>
                     </navigationItem>
                     <connections>
                         <outlet property="moscowMapView" destination="eLe-H5-W9E" id="CCi-rE-Lcc"/>
                         <segue destination="Omf-fm-tMj" kind="show" identifier="ARSegue" id="znA-ou-tN1"/>
+                        <segue destination="Pya-1t-3pj" kind="show" identifier="ImageSegue" id="O9J-t6-Jja"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1633" y="12"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="wEd-Ft-cF2">
+            <objects>
+                <viewController id="Pya-1t-3pj" customClass="ImageViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cfr-as-nwH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NMP-K5-j9w">
+                                <rect key="frame" x="0.0" y="44" width="375" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uWU-De-Qcy">
+                                <rect key="frame" x="0.0" y="77.5" width="375" height="589.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="uFj-Hi-sfX" appends="YES" id="wVJ-Fv-QK7"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="scH-0d-0yX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="scH-0d-0yX" firstAttribute="bottom" secondItem="uWU-De-Qcy" secondAttribute="bottom" id="34S-FF-1nZ"/>
+                            <constraint firstItem="uWU-De-Qcy" firstAttribute="top" secondItem="NMP-K5-j9w" secondAttribute="bottom" id="KES-ey-kMu"/>
+                            <constraint firstItem="uWU-De-Qcy" firstAttribute="leading" secondItem="scH-0d-0yX" secondAttribute="leading" id="T8S-xf-Bvx"/>
+                            <constraint firstItem="NMP-K5-j9w" firstAttribute="top" secondItem="scH-0d-0yX" secondAttribute="top" id="m2C-bg-xPi"/>
+                            <constraint firstItem="scH-0d-0yX" firstAttribute="trailing" secondItem="uWU-De-Qcy" secondAttribute="trailing" id="pJW-bU-dnh"/>
+                            <constraint firstItem="scH-0d-0yX" firstAttribute="trailing" secondItem="NMP-K5-j9w" secondAttribute="trailing" id="rB9-im-Gl1"/>
+                            <constraint firstItem="NMP-K5-j9w" firstAttribute="leading" secondItem="scH-0d-0yX" secondAttribute="leading" id="wBu-U5-6Bc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="XHD-6J-y7u"/>
+                    <connections>
+                        <outlet property="imageView" destination="uWU-De-Qcy" id="KXq-jg-7Kx"/>
+                        <outlet property="label" destination="NMP-K5-j9w" id="51p-3S-Ns9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ab5-5x-Llc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uFj-Hi-sfX">
+                    <connections>
+                        <action selector="userTapped:" destination="Pya-1t-3pj" id="j95-8N-1Pj"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2414" y="475"/>
         </scene>
         <!--Найдите книгу-->
         <scene sceneID="1lv-aO-Y7s">
@@ -93,9 +144,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SYV-va-5sO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2454" y="11"/>
+            <point key="canvasLocation" x="2415" y="-340"/>
         </scene>
-        <!--Пушкин в России-->
+        <!--Места съёмок «Гостьи из будущего»-->
         <scene sceneID="axE-z0-xbC">
             <objects>
                 <viewController storyboardIdentifier="RussiaViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="G9b-mT-vZM" customClass="CountryViewController" customModule="Apeiron_App" customModuleProvider="target" sceneMemberID="viewController">
@@ -116,7 +167,7 @@
                             <constraint firstItem="2DN-MV-a4q" firstAttribute="leading" secondItem="Tu0-Xb-hqc" secondAttribute="leading" id="phs-hq-boa"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Пушкин в России" id="5f7-e7-16d">
+                    <navigationItem key="navigationItem" title="Места съёмок «Гостьи из будущего»" id="5f7-e7-16d">
                         <barButtonItem key="backBarButtonItem" title="Россия" id="znE-PX-ZGd"/>
                     </navigationItem>
                     <connections>
@@ -147,4 +198,9 @@
             <point key="canvasLocation" x="-38" y="13"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
