@@ -1,6 +1,6 @@
 # Alisa App
 
-Places where Guest from the Future movie was shot.
+Places where [Guest from the Future](https://romantiki.ru) movie was shot.
 
 ## Screenshots
 
@@ -15,3 +15,7 @@ Places where Guest from the Future movie was shot.
 
 ### Girls running from Veselchak
 ![Girls running from Veselchak](https://github.com/dbystruev/Alisa/blob/master/Apeiron.App/Common/Assets.xcassets/Screnshots/Screenshot04.imageset/Screenshot04.png?raw=true)
+
+## 
+
+Movie data from [Kosmonet.info](https://kosmonet.info/words/texts/peregrinatio1.htm)
