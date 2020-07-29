@@ -68,12 +68,12 @@
                         <viewLayoutGuide key="safeArea" id="scH-0d-0yX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="scH-0d-0yX" firstAttribute="bottom" secondItem="uWU-De-Qcy" secondAttribute="bottom" id="34S-FF-1nZ"/>
+                            <constraint firstAttribute="bottom" secondItem="uWU-De-Qcy" secondAttribute="bottom" id="34S-FF-1nZ"/>
                             <constraint firstItem="uWU-De-Qcy" firstAttribute="top" secondItem="NMP-K5-j9w" secondAttribute="bottom" id="KES-ey-kMu"/>
-                            <constraint firstItem="uWU-De-Qcy" firstAttribute="leading" secondItem="scH-0d-0yX" secondAttribute="leading" id="T8S-xf-Bvx"/>
+                            <constraint firstItem="uWU-De-Qcy" firstAttribute="leading" secondItem="cfr-as-nwH" secondAttribute="leading" id="T8S-xf-Bvx"/>
                             <constraint firstItem="NMP-K5-j9w" firstAttribute="top" secondItem="scH-0d-0yX" secondAttribute="top" id="m2C-bg-xPi"/>
-                            <constraint firstItem="scH-0d-0yX" firstAttribute="trailing" secondItem="uWU-De-Qcy" secondAttribute="trailing" id="pJW-bU-dnh"/>
-                            <constraint firstItem="scH-0d-0yX" firstAttribute="trailing" secondItem="NMP-K5-j9w" secondAttribute="trailing" id="rB9-im-Gl1"/>
+                            <constraint firstAttribute="trailing" secondItem="uWU-De-Qcy" secondAttribute="trailing" id="pJW-bU-dnh"/>
+                            <constraint firstAttribute="trailing" secondItem="NMP-K5-j9w" secondAttribute="trailing" id="rB9-im-Gl1"/>
                             <constraint firstItem="NMP-K5-j9w" firstAttribute="leading" secondItem="scH-0d-0yX" secondAttribute="leading" id="wBu-U5-6Bc"/>
                         </constraints>
                     </view>
